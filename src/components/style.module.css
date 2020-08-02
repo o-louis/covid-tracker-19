@@ -1,0 +1,35 @@
+.cards {
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 120px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cards .title {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.cards .total {
+    align-self: flex-end;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.recovered {
+    color: rgb(21, 120, 21);
+}
+
+.deaths {
+    color: rgb(199, 32, 32);
+}
+
+.percentage {
+    align-self: flex-end;
+    font-size: 0.8rem;
+}
