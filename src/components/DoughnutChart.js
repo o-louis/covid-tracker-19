@@ -1,7 +1,7 @@
 import React from 'react'
 import { Doughnut } from 'react-chartjs-2';
 
-const DoughnutChart = ({country}) => {
+const DoughnutChart = ({countryData}) => {
     return (
         <Doughnut 
             data={{
@@ -11,16 +11,16 @@ const DoughnutChart = ({country}) => {
                     'Deaths'
                 ],
                 datasets: [{
-                    data: country,
+                    data: countryData,
                     backgroundColor: [
-                        '#FF6384',
-                        '#36A2EB',
-                        '#FFCE56'
+                        'black',
+                        '#3CB371',
+                        '#DC143C'
                     ],
                     hoverBackgroundColor: [
-                        '#FF6384',
-                        '#36A2EB',
-                        '#FFCE56'
+                        'black',
+                        '#3CB371',
+                        '#DC143C'
                     ]
                 }]
             }}

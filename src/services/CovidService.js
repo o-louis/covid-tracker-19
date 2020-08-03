@@ -1,27 +1,27 @@
 import axios from 'axios';
-
+import * as query from "../utils/requests"
 
 const request = {
     fetchGlobalData: async () => {
-        var url = "https://covid19.mathdro.id/api";
+        const url = query.BASE_URL;
         const response = await axios(url);
         return response.data;
     },
 
     fetchDailyData: async () => {
-        var url = "https://covid19.mathdro.id/api/daily";
+        const url = query.BASE_URL+query.DAILY;
         const response = await axios(url);
         return response.data;
     },
 
-    fetchCountry: async (country) => {
-        var url = "https://covid19.mathdro.id/api/countries/" + country;
+    fetchCountryData: async (country) => {
+        const url = query.BASE_URL+query.COUNTRIES+"/"+country;
         const response = await axios(url);
         return response.data;
     },
 
     fetchCountriesList: async () => {
-        var url = "https://covid19.mathdro.id/api/countries/";
+        const url = query.BASE_URL+query.COUNTRIES;
         const response = await axios(url);
         return response.data;
     },

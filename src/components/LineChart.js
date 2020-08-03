@@ -9,15 +9,16 @@ const LineChart = ({dailyData}) => {
                 datasets: [{
                     data: dailyData.map((item) => item[1]),
                     label: 'Infected',
-                    borderColor: 'green',
+                    borderColor: '#3CB371',
                     fill: true,
                 }, {
                     data: dailyData.map((item) => item[2]),
                     label: 'Deaths',
-                    borderColor: 'red',
+                    borderColor: '#DC143C',
                     fill: true,
                 }]
             }}
+            className="line-chart"
         />
     )
 }
