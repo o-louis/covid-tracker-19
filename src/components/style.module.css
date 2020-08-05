@@ -17,14 +17,11 @@
 .cards .title {
     text-transform: uppercase;
     font-size: 1.6rem;
-    /* font-weight: 500; */
     font-family: Roboto;
-    /* color: #7dcfb6; */
 }
 
 .cards .total {
-    /* align-self: flex-end; */
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 600;
     margin: auto 0;
 }
@@ -38,8 +35,27 @@
 }
 
 .percentage {
-    /* align-self: flex-end; */
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     position: absolute;
     bottom: 10px;
+}
+
+@media screen and (min-width: 481px) {
+    .cards .total {
+        font-size: 2rem;
+    }
+
+    .percentage {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .cards .total {
+        font-size: 2.5rem;
+    }
+
+    .percentage {
+        font-size: 1.5rem;
+    }
 }

@@ -10,10 +10,10 @@ import CovidService from './services/CovidService';
 
 const App = () => {
     const [datas, setDatas] = useState([]);
-    const [countryData, setCountryData] = useState([]);
     const [options, setOptions] = useState([]);
-    const [selected, setSelected] = useState('global');
     const [dailyData, setDailyData] = useState([]);
+    const [countryData, setCountryData] = useState([]);
+    const [selected, setSelected] = useState('global');
     const [lastUpdate, setLastUpdate] = useState(null);
     const [isSendingRequest, setIsSendingRequest] = useState(false);
 
