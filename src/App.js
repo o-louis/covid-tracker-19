@@ -12,6 +12,7 @@ const App = () => {
     const [datas, setDatas] = useState([]);
     const [options, setOptions] = useState([]);
     const [dailyData, setDailyData] = useState([]);
+    const [globalData, setGlobalData] = useState([]);
     const [countryData, setCountryData] = useState([]);
     const [selected, setSelected] = useState('global');
     const [lastUpdate, setLastUpdate] = useState(null);
@@ -21,11 +22,13 @@ const App = () => {
         CovidService.fetchGlobalData()
             .then(response => {
                 const { confirmed, recovered, deaths, lastUpdate } = response;
-                setDatas([
+                const global = [
                     { confirmed: confirmed.value },
                     { recovered: recovered.value },
                     { deaths: deaths.value }
-                ])
+                ]
+                setDatas(global);
+                setGlobalData(global);
                 setLastUpdate(convertDate(lastUpdate));
                 setIsSendingRequest(true);
             }).catch(err => console.log(err));
@@ -66,7 +69,15 @@ const App = () => {
                         recovered.value,
                         deaths.value
                     ])
+
+                    setDatas([
+                            { confirmed: confirmed.value },
+                            { recovered: recovered.value },
+                            { deaths: deaths.value }
+                    ]);
                 }).catch(err => console.log(err));
+        } else {
+            setDatas(globalData);
         }
         setSelected(value);
     };
@@ -93,7 +104,7 @@ const App = () => {
                 <div className="container">
                     <h3>Last updates: {lastUpdate}</h3>
                     <div className="cards-container">
-                        <CardsList datas={datas} />
+                        <CardsList datas={datas}/>
                     </div>
                     <Select selected={selected} options={options} handleChange={handleChange}/>
                     <Chart selected={selected} countryData={countryData} dailyData={dailyData} />

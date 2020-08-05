@@ -24,6 +24,13 @@ const DoughnutChart = ({countryData}) => {
                     ]
                 }]
             }}
+            options={{
+                legend: {
+                    labels: {
+                        fontColor: 'white'
+                    }
+                },
+            }}
         />
     )
 }
