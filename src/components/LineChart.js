@@ -9,13 +9,13 @@ const LineChart = ({dailyData}) => {
                 datasets: [{
                     data: dailyData.map((item) => item[1]),
                     label: 'Infected',
-                    borderColor: '#3CB371',
+                    borderColor: '#51D092',
                     fill: true,
                     backgroundColor: "rgba(255, 255, 255, 0.1)"
                 }, {
                     data: dailyData.map((item) => item[2]),
                     label: 'Deaths',
-                    borderColor: '#DC143C',
+                    borderColor: 'black',
                     fill: true,
                 }]
             }}
@@ -31,12 +31,16 @@ const LineChart = ({dailyData}) => {
                     xAxes: [{
                         ticks: {
                             fontColor: "#CCC",
+                            
+                        },
+                        gridLines: {
+                            display: false,
                         },
                     }],
                     yAxes: [{
                         ticks: {
                             fontColor: "#CCC",
-                        },
+                        }
                     }],
                 }
             }}

@@ -87,19 +87,6 @@ const App = () => {
             <h1>COVID Tracker</h1>
             <h5>Wear a mask. Save lives.</h5>
 
-            <div className="prevent-message">
-                <div className="description">
-                    <h3>People who know or think they might have COVID-19</h3>
-                    <li className="symptoms">
-                        If you are sick with COVID-19 or think you might have COVID-19, do not visit public areas. Stay home except to get medical care. As much as possible stay in a specific room and away from other people and pets in your home.
-                    </li>
-                    <li className="symptoms">
-                        If you need to be around other people or animals, wear a mask (including in your home).
-                        The mask helps prevent a person who is sick from spreading the virus to others. It helps keep respiratory droplets contained and from reaching other people.
-                    </li>
-                </div>
-            </div>
-
             { isSendingRequest &&
                 <div className="container">
                     <h3>Last updates: {lastUpdate}</h3>

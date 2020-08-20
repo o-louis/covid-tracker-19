@@ -13,14 +13,14 @@ const DoughnutChart = ({countryData}) => {
                 datasets: [{
                     data: countryData,
                     backgroundColor: [
-                        'black',
-                        '#3CB371',
-                        '#DC143C'
+                        '#EEE75C',
+                        '#51D092',
+                        'black'
                     ],
                     hoverBackgroundColor: [
-                        'black',
-                        '#3CB371',
-                        '#DC143C'
+                        '#EEE75C',
+                        '#51D092',
+                        'black'
                     ]
                 }]
             }}
